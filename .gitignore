@@ -1,0 +1,6 @@
+# Binarios compilados
+/cc63d-ci-demo
+*.exe
+*.test
+*.out
+.DS_Store

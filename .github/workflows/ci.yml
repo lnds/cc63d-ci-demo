@@ -1,0 +1,21 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+
+      - name: Compilar
+        run: go build ./...                     # 1. el código compila
+
+      - name: Pruebas unitarias
+        run: go test ./...                      # 2. funciones puras, rápidas
+
+      - name: Pruebas de integración
+        run: go test -tags=integration ./...    # 3. el handler HTTP de punta a punta
