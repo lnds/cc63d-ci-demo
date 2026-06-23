@@ -32,3 +32,7 @@ La prueba de integración lleva la etiqueta `//go:build integration`, así que
 
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) ejecuta esas tres etapas
 en cada `push` y cada `pull_request`. Si una falla, el run queda **rojo**.
+
+
+## test
+test para demo
